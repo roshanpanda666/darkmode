@@ -3,21 +3,24 @@ import './App.css';
 
 function App() {
   const[light,setStyle]=useState("cont1")
+  const[lightModeButton,DarkModeButton]=useState("lightBtn")
+  const[lighttxt,darktxt]=useState("light mode")
+  const[txt,styletxt]=useState("lightmodetext")
+
   const dark=()=>{
     setStyle("cont2")
+    DarkModeButton("darkBtn")
+    darktxt("dark mode")
+    styletxt("darkmodetxt")
   }
 
-  const[lightModeButton,DarkModeButton]=useState("lightBtn")
-  const modebtn=()=>{
-    DarkModeButton("darkBtn")
-  }
-  
   return (
     
     <div>
       <div className={light}>
-        
-        <button className={lightModeButton} onClick={dark} onClickCapture={modebtn}>click !</button>
+
+        <h1 className={txt}>{lighttxt}</h1>
+        <button className={lightModeButton} onClick={dark}>click !</button>
         
       </div>
     </div>
