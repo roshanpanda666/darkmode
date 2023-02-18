@@ -72,3 +72,6 @@ box-shadow: 1px 9px 16px -4px rgba(0,242,255,1);
   font-weight: 900;
   transition-duration: 1s;
 }
+.titleC{
+  color: cyan;
+}

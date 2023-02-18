@@ -1,4 +1,5 @@
 import React,{ useState } from 'react';
+import FormsInputs from './components/formsInputs';
 import './App.css';
 
 function App() {
@@ -20,10 +21,11 @@ function App() {
     
     <div>
       <div className={light}>
-
+        <FormsInputs></FormsInputs>
         <h1 className={txt}>{lighttxt}</h1>
         <button className={lightModeButton} onClick={dark}>click !</button>
         <div className={game}>
+          
         <br></br>enjoy the gaming experience more with Dark mode
         </div>
       </div>
