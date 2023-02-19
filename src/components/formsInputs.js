@@ -4,24 +4,28 @@ import { useState } from 'react'
 export default function FormsInputs(props) {
 
     const[title,seTtitle]=useState('')
-
+    const[name,updateName]=useState('')
 
     const onSubmit=(event)=>{
         event.preventDefault()
 
         seTtitle(event.target.value)
     }
+
+    const clicked=()=>{
+      updateName(title)
+    }
     
 
   return (
     <div>
-      <form onSubmit={onSubmit} className="fathercont" >
-        <input type="text" className='TxtForm' value={title}/>
+      
+        <input type="text" className='TxtForm'onChange={onSubmit} value={title}/>
         <div className="titleC">
-            {title}
+            {name}
         </div>
-        <button type='submit'>click</button>
-      </form>
+        <button onClick={clicked} >click</button>
+      
     </div>
   )
 }
